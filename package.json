@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.12",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.8.0",
@@ -29,5 +30,8 @@
     "prettier": "^3.3.3",
     "ts-jest": "^29.2.3",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "uuid": "^10.0.0"
   }
 }
