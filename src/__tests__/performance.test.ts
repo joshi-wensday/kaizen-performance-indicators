@@ -1,4 +1,4 @@
-import { KPILibrary, createFlexibleDate } from '../index';
+import { KPILibrary, createFlexibleDate, Log } from '../index';
 
 describe('KPILibrary Performance Tests', () => {
   let library: KPILibrary;
@@ -67,7 +67,7 @@ describe('KPILibrary Performance Tests', () => {
       patchVersion: '1.0.0'
     });
 
-    const logs = [];
+    const logs: Log[] = [];
     for (let i = 0; i < 10000; i++) {
       logs.push(library.createLog({
         date: createFlexibleDate(2023, 7, 1 + i),
