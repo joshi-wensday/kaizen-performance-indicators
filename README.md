@@ -1,6 +1,6 @@
 # Kaizen-PIs Library
 
-**Version: 1.0.0**
+**Version: 1.0.3**
 
 Kaizen-PIs Library is a powerful and flexible tool for tracking, calculating, and analyzing Kaizen Performance Indicators (KPIs). It provides a robust set of features for managing KPIs, logs, and patches, as well as performing calculations and aggregations.
 

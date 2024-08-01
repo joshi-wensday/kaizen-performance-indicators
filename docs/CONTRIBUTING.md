@@ -1,6 +1,6 @@
 # Contributing to Kaizen-PIs Library
 
-**Version: 1.0.0**
+**Version: 1.0.3**
 
 We welcome contributions to the Kaizen-PIs Library! Here's how you can help:
 

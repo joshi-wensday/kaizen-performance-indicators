@@ -1,6 +1,6 @@
 # Advanced Usage Guide for Kaizen-PIs Library
 
-**Version: 1.0.0**
+**Version: 1.0.3**
 
 ## Implementing Custom Data Types
 

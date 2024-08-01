@@ -1,6 +1,6 @@
 # Integration Guide for Kaizen-PIs Library
 
-**Version: 1.0.0**
+**Version: 1.0.3**
 
 This guide provides examples and best practices for integrating the Kaizen-PIs Library into your application's state management and data storage solutions.
 
