@@ -1,0 +1,8 @@
+src/
+tests/
+.gitignore
+.eslintrc.js
+.prettierrc
+jest.config.js
+rollup.config.js
+tsconfig.json
