@@ -13,12 +13,26 @@
     "format": "prettier --write 'src/**/*.{js,ts}'",
     "prepublishOnly": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "kpi",
     "metrics",
-    "tracking"
+    "tracking",
+    "management",
+    "performance",
+    "kaizen",
+    "kaizen-pis",
+    "kaizen-pis-library",
+    "kaizen-pis-library-ts",
+    "kaizen-pis-library-js",
+    "kaizen-pis-library-browser",
+    "kaizen-pis-library-node",
+    "kaizen-pis-library-umd",
+    "indicators"
   ],
-  "author": "Your Name",
+  "author": "joshi-wensday",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",

@@ -60,6 +60,7 @@ export interface KPI extends KPIData {
 export function createKPI(data: KPIData): KPI {
   return {
     ...data,
+    id: data.id || uuidv4(), // Generate a new UUID if no ID is provided
     update(updateData: Partial<KPIData>) {
       // Merge the update data with the existing KPI data
       Object.assign(this, updateData);

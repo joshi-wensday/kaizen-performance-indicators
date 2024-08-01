@@ -1,9 +1,9 @@
-import typescript from '@rollup/plugin-typescript';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import pkg from './package.json';
+const typescript = require('@rollup/plugin-typescript');
+const resolve = require('@rollup/plugin-node-resolve');
+const commonjs = require('@rollup/plugin-commonjs');
+const pkg = require('./package.json');
 
-export default [
+module.exports = [
   // Browser-friendly UMD build
   {
     input: 'src/index.ts',
