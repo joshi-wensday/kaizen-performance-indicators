@@ -57,6 +57,14 @@ if (latestLog) {
 - [Integration Guide](./INTEGRATION_GUIDE.md)
 - [Changelog](./CHANGELOG.md)
 
+## Example Usage
+
+Check out `examples/library-demo.ts` for a comprehensive demonstration of the library's features. You can run this example using:
+
+```bash
+npx ts-node examples/library-demo.ts
+```
+
 ## Contributing
 
 We welcome contributions to the Kaizen-PIs Library! Please see our [Contributing Guide](./CONTRIBUTING.md) for more details on how to get started.

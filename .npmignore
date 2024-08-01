@@ -1,5 +1,6 @@
 src/
 tests/
+examples/
 .gitignore
 .eslintrc.js
 .prettierrc
