@@ -7,3 +7,6 @@ examples/
 jest.config.js
 rollup.config.js
 tsconfig.json
+# Include documentation
+!*.md
+!docs/

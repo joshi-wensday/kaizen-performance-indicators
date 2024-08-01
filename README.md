@@ -52,9 +52,9 @@ if (latestLog) {
 
 ## Documentation
 
-- [API Reference](./API.md)
-- [Advanced Usage Guide](./ADVANCED_USAGE.md)
-- [Integration Guide](./INTEGRATION_GUIDE.md)
+- [API Reference](./docs/API.md)
+- [Advanced Usage Guide](./docs/ADVANCED_USAGE.md)
+- [Integration Guide](./docs/INTEGRATION_GUIDE.md)
 - [Changelog](./CHANGELOG.md)
 
 ## Example Usage
@@ -67,7 +67,7 @@ npx ts-node examples/library-demo.ts
 
 ## Contributing
 
-We welcome contributions to the Kaizen-PIs Library! Please see our [Contributing Guide](./CONTRIBUTING.md) for more details on how to get started.
+We welcome contributions to the Kaizen-PIs Library! Please see our [Contributing Guide](./docs/CONTRIBUTING.md) for more details on how to get started.
 
 ## License
 
@@ -75,4 +75,4 @@ This project is licensed under the MIT License.
 
 ## FAQ
 
-For frequently asked questions, please refer to our [FAQ section](./FAQ.md).
+For frequently asked questions, please refer to our [FAQ section](./docs/FAQ.md).

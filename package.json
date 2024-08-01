@@ -1,6 +1,6 @@
 {
   "name": "kaizen-pis-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for managing Kaizen Performance Indicators",
   "main": "dist/kaizen-pis-library.cjs.js",
   "module": "dist/kaizen-pis-library.esm.js",
@@ -14,7 +14,9 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "*.md",
+    "docs"
   ],
   "keywords": [
     "kpi",
