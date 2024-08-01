@@ -13,6 +13,10 @@ import {
     FlexibleDate
   } from './index';
 
+/**
+ * Main class for managing KPIs, logs, patches, and performing calculations and aggregations.
+ * Provides a high-level interface for interacting with the Kaizen-PIs Library.
+ */
 export class KPILibrary {
   private kpiManager: KPIManager;
   private patchManager: PatchManager;

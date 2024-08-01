@@ -1,4 +1,4 @@
-import { Log, LogData, LogEntry, LogManager, createFlexibleDate, FlexibleDate } from '../index';
+import { Log, LogData, LogManager, createFlexibleDate, FlexibleDate } from '../index';
 
 describe('Log', () => {
   const logData: LogData = {
