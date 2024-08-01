@@ -1,5 +1,4 @@
-import { Patch, PatchData } from '../patch';
-import { PatchManager } from '../patchManager';
+import { Patch, PatchData, PatchManager } from '../index';
 
 describe('Patch', () => {
   const patchData: PatchData = {

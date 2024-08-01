@@ -1,5 +1,5 @@
-import { Log, LogData } from './log';
-import { FlexibleDate, compareFlexibleDates } from './flexibleDate';
+import { Log, LogData, FlexibleDate, compareFlexibleDates } from './index';
+
 
 export class LogManager {
   private logs: Map<string, Log> = new Map();

@@ -1,6 +1,4 @@
-import { KPI } from './kpi';
-import { Log, LogEntry } from './log';
-import { Patch } from './patch';
+import { KPI, Log, LogEntry, Patch } from './index';
 
 export class CalculationEngine {
   calculateScore(kpi: KPI, logEntry: LogEntry): number {

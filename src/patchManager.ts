@@ -1,4 +1,4 @@
-import { Patch, PatchData } from './patch';
+import { Patch, PatchData } from './index';
 
 export class PatchManager {
   private patches: Map<string, Patch> = new Map();

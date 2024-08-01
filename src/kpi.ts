@@ -9,6 +9,7 @@ export interface KPIData {
   customDataType?: any;
   conversionRule: ConversionRule;
   attributes?: KPIAttribute[];
+  patchVersion: string; // Added this line
 }
 
 interface ConversionRule {

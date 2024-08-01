@@ -1,4 +1,4 @@
-import { KPI, KPIData, createKPI } from './kpi';
+import { KPI, KPIData, createKPI } from './index';
 
 export class KPIManager {
   private kpis: Map<string, KPI> = new Map();
@@ -28,5 +28,28 @@ export class KPIManager {
 
   getAllKPIs(): KPI[] {
     return Array.from(this.kpis.values());
+  }
+
+  getAllCategories(patchVersion?: string): { [category: string]: string[] } {
+    const categories: { [category: string]: Set<string> } = {};
+
+    this.kpis.forEach(kpi => {
+      if (!patchVersion || kpi.patchVersion === patchVersion) {
+        if (!categories[kpi.category]) {
+          categories[kpi.category] = new Set();
+        }
+        if (kpi.subcategory) {
+          categories[kpi.category].add(kpi.subcategory);
+        }
+      }
+    });
+
+    // Convert Sets to arrays
+    return Object.fromEntries(
+      Object.entries(categories).map(([category, subcategories]) => [
+        category,
+        Array.from(subcategories)
+      ])
+    );
   }
 }

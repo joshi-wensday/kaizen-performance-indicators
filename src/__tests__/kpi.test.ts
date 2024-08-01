@@ -1,5 +1,4 @@
-import { createKPI, KPI, KPIData } from '../kpi';
-import { KPIManager } from '../kpiManager';
+import { createKPI, KPIData, KPIManager } from '../index';
 
 describe('KPI', () => {
   const kpiData: KPIData = {
@@ -8,6 +7,7 @@ describe('KPI', () => {
     category: 'Test Category',
     dataType: 'number',
     conversionRule: { type: 'simple', pointsPerUnit: 1 },
+    patchVersion: '1.0.0'
   };
 
   it('should create a KPI with correct properties', () => {
@@ -46,6 +46,7 @@ describe('KPIManager', () => {
     category: 'Test Category',
     dataType: 'number',
     conversionRule: { type: 'simple', pointsPerUnit: 1 },
+    patchVersion: '1.0.0'
   };
 
   beforeEach(() => {
@@ -89,5 +90,57 @@ describe('KPIManager', () => {
     expect(allKPIs.length).toBe(2);
     expect(allKPIs[0].name).toBe('Test KPI');
     expect(allKPIs[1].name).toBe('Another KPI');
+  });
+
+  it('should retrieve all categories and subcategories', () => {
+    const manager = new KPIManager();
+    manager.createKPI({
+      id: '1',
+      name: 'KPI 1',
+      category: 'Category A',
+      subcategory: 'Subcategory A1',
+      dataType: 'number',
+      conversionRule: { type: 'simple', pointsPerUnit: 1 },
+      patchVersion: '1.0.0'
+    });
+    manager.createKPI({
+      id: '2',
+      name: 'KPI 2',
+      category: 'Category A',
+      subcategory: 'Subcategory A2',
+      dataType: 'number',
+      conversionRule: { type: 'simple', pointsPerUnit: 1 },
+      patchVersion: '1.0.0'
+    });
+    manager.createKPI({
+      id: '3',
+      name: 'KPI 3',
+      category: 'Category B',
+      dataType: 'number',
+      conversionRule: { type: 'simple', pointsPerUnit: 1 },
+      patchVersion: '1.0.0'
+    });
+    manager.createKPI({
+      id: '4',
+      name: 'KPI 4',
+      category: 'Category C',
+      subcategory: 'Subcategory C1',
+      dataType: 'number',
+      conversionRule: { type: 'simple', pointsPerUnit: 1 },
+      patchVersion: '2.0.0'
+    });
+
+    const allCategories = manager.getAllCategories();
+    expect(allCategories).toEqual({
+      'Category A': ['Subcategory A1', 'Subcategory A2'],
+      'Category B': [],
+      'Category C': ['Subcategory C1']
+    });
+
+    const categoriesForPatch1 = manager.getAllCategories('1.0.0');
+    expect(categoriesForPatch1).toEqual({
+      'Category A': ['Subcategory A1', 'Subcategory A2'],
+      'Category B': []
+    });
   });
 });

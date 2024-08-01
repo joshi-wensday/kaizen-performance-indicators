@@ -1,8 +1,4 @@
-import { CalculationEngine } from '../calculationEngine';
-import { createKPI, KPI } from '../kpi';
-import { Log, LogEntry } from '../log';
-import { Patch } from '../patch';
-import { createFlexibleDate } from '../flexibleDate';
+import { CalculationEngine, createKPI, KPI, Log, LogEntry, Patch, createFlexibleDate } from '../index';
 
 describe('CalculationEngine', () => {
   let engine: CalculationEngine;
@@ -18,7 +14,8 @@ describe('CalculationEngine', () => {
         name: 'Test KPI',
         category: 'Test',
         dataType: 'number',
-        conversionRule: { type: 'simple', pointsPerUnit: 2 }
+        conversionRule: { type: 'simple', pointsPerUnit: 2 },
+        patchVersion: '1.0.0'
       });
       const logEntry: LogEntry = { kpiId: '1', value: 5 };
 
@@ -37,7 +34,8 @@ describe('CalculationEngine', () => {
             { threshold: 5, pointsPerUnit: 2 },
             { threshold: 10, pointsPerUnit: 1 }
           ] 
-        }
+        },
+        patchVersion: '1.0.0'
       });
       const logEntry: LogEntry = { kpiId: '1', value: 7 };
 
@@ -56,7 +54,8 @@ describe('CalculationEngine', () => {
         attributes: [
           { name: 'bonus', type: 'modifier', value: 5 },
           { name: 'multiplier', type: 'multiplier', value: 1.5 }
-        ]
+        ],
+        patchVersion: '1.0.0'
       });
       const logEntry: LogEntry = { kpiId: '1', value: 10 };
 
@@ -70,7 +69,8 @@ describe('CalculationEngine', () => {
         name: 'Test KPI',
         category: 'Test',
         dataType: 'number',
-        conversionRule: { type: 'simple', pointsPerUnit: 2 }
+        conversionRule: { type: 'simple', pointsPerUnit: 2 },
+        patchVersion: '1.0.0'
       });
       const logEntry: LogEntry = { 
         kpiId: '1', 
@@ -91,14 +91,16 @@ describe('CalculationEngine', () => {
           name: 'KPI 1',
           category: 'Test',
           dataType: 'number',
-          conversionRule: { type: 'simple', pointsPerUnit: 1 }
+          conversionRule: { type: 'simple', pointsPerUnit: 1 },
+          patchVersion: '1.0.0'
         }),
         createKPI({
           id: '2',
           name: 'KPI 2',
           category: 'Test',
           dataType: 'number',
-          conversionRule: { type: 'simple', pointsPerUnit: 2 }
+          conversionRule: { type: 'simple', pointsPerUnit: 2 },
+          patchVersion: '1.0.0'
         })
       ];
       const log: Log = new Log({
@@ -122,14 +124,16 @@ describe('CalculationEngine', () => {
           name: 'KPI 1',
           category: 'Category A',
           dataType: 'number',
-          conversionRule: { type: 'simple', pointsPerUnit: 1 }
+          conversionRule: { type: 'simple', pointsPerUnit: 1 },
+          patchVersion: '1.0.0'
         }),
         createKPI({
           id: '2',
           name: 'KPI 2',
           category: 'Category B',
           dataType: 'number',
-          conversionRule: { type: 'simple', pointsPerUnit: 2 }
+          conversionRule: { type: 'simple', pointsPerUnit: 2 },
+          patchVersion: '1.0.0'
         })
       ];
       const log: Log = new Log({
@@ -155,7 +159,8 @@ describe('CalculationEngine', () => {
           name: 'KPI 1',
           category: 'Test',
           dataType: 'number',
-          conversionRule: { type: 'simple', pointsPerUnit: 1 }
+          conversionRule: { type: 'simple', pointsPerUnit: 1 },
+          patchVersion: '1.0.0'
         })
       ];
       const patch: Patch = new Patch({
